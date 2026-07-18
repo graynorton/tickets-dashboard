@@ -1,0 +1,22 @@
+# Netlify config for the TICKETS (StubHub watcher) dashboard — STATIC-ONLY.
+#
+# Unlike the homes (../netlify.toml) and cars (../cars/netlify.toml) sites, the
+# tickets dashboard is PURELY STATIC: tickets has no stars / saved-views / triage,
+# so it ships NONE of the intent-inbox scaffolding those sites carry — no
+# `functions/` directory, no `@netlify/blobs` dependency, and no `ANNOTATE_*`
+# secrets (hence no `SECRETS_SCAN_OMIT_KEYS` dance — nothing secret is embedded in
+# the page). The run.py wires GitPagesPublisher with `include_shared_assets=False`
+# (spec §D5), so the publisher copies only this config into the dashboard repo, not
+# the shared annotate.js + Functions.
+#
+# Same single-origin shape as the other two: Netlify deploys from the tickets
+# dashboard GitHub repo — the SAME repo the tickets monitor's GitPagesPublisher
+# pushes index.html into. The static site is served as-is (no build step). This
+# per-domain config resolves from `netlify/tickets/` (run.py passes
+# assets_dir=netlify/tickets); its content is folded into the publish signature so
+# an edit here flips the sig and the normal gated push carries it.
+
+[build]
+  # No build: the dashboard is pre-rendered HTML pushed by the monitor.
+  command = ""
+  publish = "."
