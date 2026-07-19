@@ -6,20 +6,38 @@
 <meta name="color-scheme" content="light dark">
 <title>Tickets — 58 listings</title>
 <style>
-  :root { --bg:#0f1115; --fg:#e6e8eb; --muted:#8a929e; --card:#1a1d23;
-          --chip:#22262e; --accent:#34d399; --warn:#f59e0b; }
+  :root { --bg:#0f1115; --card:#1a1d24; --fg:#e8eaed; --muted:#9aa0a6;
+          --chip:#262b34; --accent:#34d399; --warn:#f59e0b; }
   @media (prefers-color-scheme: light){
-    :root { --bg:#f7f8fa; --fg:#1a1d23; --muted:#6b7280; --card:#fff;
-            --chip:#eef1f5; --accent:#059669; --warn:#b45309; } }
+    :root { --bg:#f5f6f8; --card:#fff; --fg:#1a1d24; --muted:#5f6368;
+            --chip:#eef0f3; --accent:#059669; --warn:#b45309; } }
   * { box-sizing:border-box; }
-  body { margin:0; padding:20px; background:var(--bg); color:var(--fg);
+  body { margin:0 auto; max-width:820px; padding:20px; background:var(--bg); color:var(--fg);
          font:15px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; }
   h1 { margin:0 0 4px; font-size:22px; }
   .sub { color:var(--muted); font-size:13px; margin:0 0 14px; }
+
+  /* Event card — the homes/cars `.card` framing, one per show (§D3). */
+  .event-card { background:var(--card); border-radius:14px; padding:16px 18px; margin:12px 0;
+                box-shadow:0 1px 3px rgba(0,0,0,.18); }
+  .ev-head { display:flex; flex-wrap:wrap; align-items:baseline; gap:4px 12px;
+             margin-bottom:6px; }
+  .ev-title { flex:1 1 auto; min-width:0; }
+  .ev-artist { font-size:17px; font-weight:700; }
+  .ev-where { color:var(--muted); font-size:13px; }
+  .ev-stats { display:flex; align-items:baseline; gap:10px; white-space:nowrap; }
+  .ev-count { display:inline-block; padding:2px 10px; border-radius:999px;
+              background:var(--chip); color:var(--muted); font-size:12px; }
+  .ev-floor { color:var(--accent); font-size:17px; font-weight:700;
+              font-variant-numeric:tabular-nums; }
+  .ev-floor .from { color:var(--muted); font-size:12px; font-weight:400; margin-right:3px; }
+  .ev-empty { color:var(--muted); font-size:13px; padding:6px 0 2px; }
+
   table { border-collapse:collapse; width:100%; max-width:100%; }
   .tickets-wrap { overflow-x:auto; }
   th, td { text-align:left; padding:8px 12px; border-bottom:1px solid var(--chip);
            white-space:nowrap; }
+  tbody tr:last-child td { border-bottom:none; }
   th { color:var(--muted); font-weight:600; font-size:12px; text-transform:uppercase;
        letter-spacing:.03em; }
   td.price { font-variant-numeric:tabular-nums; font-weight:600; }
@@ -62,73 +80,198 @@
 </head>
 <body>
   <h1>🎟️ Tickets</h1>
-  <div class="sub">Showing 58 matching listings · updated Jul 18, 2026 at 2:59 PM PDT</div>
-  <div class="srcstatus"><span class="src-chip " tabindex="0" role="button" aria-expanded="false">Stubhub<span class="src-pop" role="tooltip"><div class="hd"><b>Stubhub</b> · OK</div><div class="ln">Fetching normally.</div><div class="ln"><span class="k">Last response</span> <time class="rel" datetime="2026-07-18T21:42:48+00:00">…</time></div><div class="ln"><span class="k">Last listings</span> <time class="rel" datetime="2026-07-18T21:42:48+00:00">…</time></div><div class="ln"><span class="k">Showing</span> 58 listings</div></span></span></div>
+  <div class="sub">58 matching listings across 12 shows · updated Jul 18, 2026 at 8:44 PM PDT</div>
+  <div class="srcstatus"><span class="src-chip " tabindex="0" role="button" aria-expanded="false">Stubhub<span class="src-pop" role="tooltip"><div class="hd"><b>Stubhub</b> · OK</div><div class="ln">Fetching normally.</div><div class="ln"><span class="k">Last response</span> <time class="rel" datetime="2026-07-19T03:36:25+00:00">…</time></div><div class="ln"><span class="k">Last listings</span> <time class="rel" datetime="2026-07-19T03:36:25+00:00">…</time></div><div class="ln"><span class="k">Showing</span> 58 listings</div></span></span></div>
+<section class="event-card" data-event="or-oak-1211">
+  <header class="ev-head">
+    <div class="ev-title"><div class="ev-artist">Olivia Rodrigo</div><div class="ev-where">Oakland Arena · Dec 11, 2026</div></div>
+    <div class="ev-stats"><span class="ev-count">0 listings</span></div>
+  </header>
+  <div class="ev-empty">No qualifying listings right now.</div>
+</section>
+<section class="event-card" data-event="or-oak-1212">
+  <header class="ev-head">
+    <div class="ev-title"><div class="ev-artist">Olivia Rodrigo</div><div class="ev-where">Oakland Arena · Dec 12, 2026</div></div>
+    <div class="ev-stats"><span class="ev-count">0 listings</span></div>
+  </header>
+  <div class="ev-empty">No qualifying listings right now.</div>
+</section>
+<section class="event-card" data-event="or-la-0112">
+  <header class="ev-head">
+    <div class="ev-title"><div class="ev-artist">Olivia Rodrigo</div><div class="ev-where">Intuit Dome · Jan 12, 2027</div></div>
+    <div class="ev-stats"><span class="ev-count">0 listings</span></div>
+  </header>
+  <div class="ev-empty">No qualifying listings right now.</div>
+</section>
+<section class="event-card" data-event="or-la-0113">
+  <header class="ev-head">
+    <div class="ev-title"><div class="ev-artist">Olivia Rodrigo</div><div class="ev-where">Intuit Dome · Jan 13, 2027</div></div>
+    <div class="ev-stats"><span class="ev-count">0 listings</span></div>
+  </header>
+  <div class="ev-empty">No qualifying listings right now.</div>
+</section>
+<section class="event-card" data-event="or-la-0116">
+  <header class="ev-head">
+    <div class="ev-title"><div class="ev-artist">Olivia Rodrigo</div><div class="ev-where">Intuit Dome · Jan 16, 2027</div></div>
+    <div class="ev-stats"><span class="ev-count">2 listings</span><span class="ev-floor" title="cheapest per-ticket price, all-in (incl. fees)"><span class="from">from</span>$508</span></div>
+  </header>
+  <div class="tickets-wrap">
+  <table>
+    <thead><tr><th>Section</th><th>Row</th><th>2-together</th><th class="price-h">Price/ea (all-in)<span class="fee-info" title="All-in per-ticket price — includes StubHub's fees, so it matches our price filter. Heads up: StubHub's own listing page defaults to the PRE-FEE price, which is lower, so the number you see there for the same seat will be smaller.">ⓘ</span></th><th>Value</th><th>View</th><th>Link</th></tr></thead>
+    <tbody>
+    <tr><td>T23</td><td>11</td><td>✓&nbsp;2</td><td class="price">$508<span class="fee-note">incl. fees</span></td><td><span class="tier">great</span></td><td>clear</td><td><a class="listing" href="https://www.stubhub.com/event/161041514/?quantity=2&amp;sortBy=CALCULATEDBESTVALUE&amp;sortDirection=1&amp;priceOption=0,0,550&amp;listingId=13010355932" target="_blank" rel="noopener">View ↗</a></td></tr>
+    <tr><td>T2</td><td>13</td><td>✓&nbsp;2</td><td class="price">$548<span class="fee-note">incl. fees</span></td><td><span class="tier">amazing</span></td><td>clear</td><td><a class="listing" href="https://www.stubhub.com/event/161041514/?quantity=2&amp;sortBy=CALCULATEDBESTVALUE&amp;sortDirection=1&amp;priceOption=0,0,550&amp;listingId=13213145891" target="_blank" rel="noopener">View ↗</a></td></tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+<section class="event-card" data-event="or-la-0117">
+  <header class="ev-head">
+    <div class="ev-title"><div class="ev-artist">Olivia Rodrigo</div><div class="ev-where">Intuit Dome · Jan 17, 2027</div></div>
+    <div class="ev-stats"><span class="ev-count">2 listings</span><span class="ev-floor" title="cheapest per-ticket price, all-in (incl. fees)"><span class="from">from</span>$418</span></div>
+  </header>
+  <div class="tickets-wrap">
+  <table>
+    <thead><tr><th>Section</th><th>Row</th><th>2-together</th><th class="price-h">Price/ea (all-in)<span class="fee-info" title="All-in per-ticket price — includes StubHub's fees, so it matches our price filter. Heads up: StubHub's own listing page defaults to the PRE-FEE price, which is lower, so the number you see there for the same seat will be smaller.">ⓘ</span></th><th>Value</th><th>View</th><th>Link</th></tr></thead>
+    <tbody>
+    <tr><td>T22</td><td>12</td><td>✓&nbsp;2</td><td class="price">$418<span class="fee-note">incl. fees</span></td><td><span class="tier">great</span></td><td>clear</td><td><a class="listing" href="https://www.stubhub.com/event/161041516/?quantity=2&amp;sortBy=CALCULATEDBESTVALUE&amp;sortDirection=1&amp;priceOption=0,0,550&amp;listingId=13048198655" target="_blank" rel="noopener">View ↗</a></td></tr>
+    <tr><td>T28</td><td>12</td><td>✓&nbsp;2</td><td class="price">$547<span class="fee-note">incl. fees</span></td><td><span class="tier">great</span></td><td>clear</td><td><a class="listing" href="https://www.stubhub.com/event/161041516/?quantity=2&amp;sortBy=CALCULATEDBESTVALUE&amp;sortDirection=1&amp;priceOption=0,0,550&amp;listingId=12614067094" target="_blank" rel="noopener">View ↗</a></td></tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+<section class="event-card" data-event="or-la-0120">
+  <header class="ev-head">
+    <div class="ev-title"><div class="ev-artist">Olivia Rodrigo</div><div class="ev-where">Intuit Dome · Jan 20, 2027</div></div>
+    <div class="ev-stats"><span class="ev-count">6 listings</span><span class="ev-floor" title="cheapest per-ticket price, all-in (incl. fees)"><span class="from">from</span>$279</span></div>
+  </header>
   <div class="tickets-wrap">
   <table>
     <thead><tr><th>Section</th><th>Row</th><th>2-together</th><th class="price-h">Price/ea (all-in)<span class="fee-info" title="All-in per-ticket price — includes StubHub's fees, so it matches our price filter. Heads up: StubHub's own listing page defaults to the PRE-FEE price, which is lower, so the number you see there for the same seat will be smaller.">ⓘ</span></th><th>Value</th><th>View</th><th>Link</th></tr></thead>
     <tbody>
     <tr><td>T22</td><td>6</td><td>✓&nbsp;2</td><td class="price">$279<span class="fee-note">incl. fees</span></td><td><span class="tier">great</span></td><td>clear</td><td><a class="listing" href="https://www.stubhub.com/event/161079898/?quantity=2&amp;sortBy=CALCULATEDBESTVALUE&amp;sortDirection=1&amp;priceOption=0,0,550&amp;listingId=12609661486" target="_blank" rel="noopener">View ↗</a></td></tr>
-    <tr><td>T22</td><td>12</td><td>✓&nbsp;2</td><td class="price">$287<span class="fee-note">incl. fees</span></td><td><span class="tier">amazing</span></td><td>clear</td><td><a class="listing" href="https://www.stubhub.com/event/161091284/?quantity=2&amp;sortBy=CALCULATEDBESTVALUE&amp;sortDirection=1&amp;priceOption=0,0,550&amp;listingId=12824623940" target="_blank" rel="noopener">View ↗</a></td></tr>
-    <tr><td>M22</td><td>19</td><td>✓&nbsp;2</td><td class="price">$316<span class="fee-note">incl. fees</span></td><td><span class="tier">amazing</span></td><td>clear</td><td><a class="listing" href="https://www.stubhub.com/event/161089786/?quantity=2&amp;sortBy=CALCULATEDBESTVALUE&amp;sortDirection=1&amp;priceOption=0,0,550&amp;listingId=12609497579" target="_blank" rel="noopener">View ↗</a></td></tr>
-    <tr><td>T7</td><td>7</td><td>✓&nbsp;2</td><td class="price">$338<span class="fee-note">incl. fees</span></td><td><span class="tier">amazing</span></td><td>clear</td><td><a class="listing" href="https://www.stubhub.com/event/161091284/?quantity=2&amp;sortBy=CALCULATEDBESTVALUE&amp;sortDirection=1&amp;priceOption=0,0,550&amp;listingId=13381516426" target="_blank" rel="noopener">View ↗</a></td></tr>
-    <tr><td>T3</td><td>13</td><td>✓&nbsp;2</td><td class="price">$408<span class="fee-note">incl. fees</span></td><td><span class="tier">amazing</span></td><td>clear</td><td><a class="listing" href="https://www.stubhub.com/event/161091284/?quantity=2&amp;sortBy=CALCULATEDBESTVALUE&amp;sortDirection=1&amp;priceOption=0,0,550&amp;listingId=12619768714" target="_blank" rel="noopener">View ↗</a></td></tr>
-    <tr><td>T1</td><td>13</td><td>✓&nbsp;2</td><td class="price">$413<span class="fee-note">incl. fees</span></td><td><span class="tier">amazing</span></td><td>clear</td><td><a class="listing" href="https://www.stubhub.com/event/161097468/?quantity=2&amp;sortBy=CALCULATEDBESTVALUE&amp;sortDirection=1&amp;priceOption=0,0,550&amp;listingId=13348746422" target="_blank" rel="noopener">View ↗</a></td></tr>
-    <tr><td>T1</td><td>4</td><td>✓&nbsp;2</td><td class="price">$414<span class="fee-note">incl. fees</span></td><td><span class="tier">amazing</span></td><td>clear</td><td><a class="listing" href="https://www.stubhub.com/event/161097468/?quantity=2&amp;sortBy=CALCULATEDBESTVALUE&amp;sortDirection=1&amp;priceOption=0,0,550&amp;listingId=12834227280" target="_blank" rel="noopener">View ↗</a></td></tr>
-    <tr><td>T32</td><td>12</td><td>✓&nbsp;2</td><td class="price">$414<span class="fee-note">incl. fees</span></td><td><span class="tier">amazing</span></td><td>clear</td><td><a class="listing" href="https://www.stubhub.com/event/161097468/?quantity=2&amp;sortBy=CALCULATEDBESTVALUE&amp;sortDirection=1&amp;priceOption=0,0,550&amp;listingId=13120254646" target="_blank" rel="noopener">View ↗</a></td></tr>
-    <tr><td>T31</td><td>6</td><td>✓&nbsp;2</td><td class="price">$414<span class="fee-note">incl. fees</span></td><td><span class="tier">great</span></td><td>clear</td><td><a class="listing" href="https://www.stubhub.com/event/161080573/?quantity=2&amp;sortBy=CALCULATEDBESTVALUE&amp;sortDirection=1&amp;priceOption=0,0,550&amp;listingId=13258206176" target="_blank" rel="noopener">View ↗</a></td></tr>
-    <tr><td>T31</td><td>7</td><td>✓&nbsp;2</td><td class="price">$414<span class="fee-note">incl. fees</span></td><td><span class="tier">great</span></td><td>clear</td><td><a class="listing" href="https://www.stubhub.com/event/161080573/?quantity=2&amp;sortBy=CALCULATEDBESTVALUE&amp;sortDirection=1&amp;priceOption=0,0,550&amp;listingId=13258206205" target="_blank" rel="noopener">View ↗</a></td></tr>
-    <tr><td>T32</td><td>13</td><td>✓&nbsp;2</td><td class="price">$416<span class="fee-note">incl. fees</span></td><td><span class="tier">amazing</span></td><td>clear</td><td><a class="listing" href="https://www.stubhub.com/event/161079898/?quantity=2&amp;sortBy=CALCULATEDBESTVALUE&amp;sortDirection=1&amp;priceOption=0,0,550&amp;listingId=13306306510" target="_blank" rel="noopener">View ↗</a></td></tr>
-    <tr><td>T22</td><td>12</td><td>✓&nbsp;2</td><td class="price">$418<span class="fee-note">incl. fees</span></td><td><span class="tier">great</span></td><td>clear</td><td><a class="listing" href="https://www.stubhub.com/event/161041516/?quantity=2&amp;sortBy=CALCULATEDBESTVALUE&amp;sortDirection=1&amp;priceOption=0,0,550&amp;listingId=13048198655" target="_blank" rel="noopener">View ↗</a></td></tr>
-    <tr><td>T32</td><td>10</td><td>✓&nbsp;2</td><td class="price">$419<span class="fee-note">incl. fees</span></td><td><span class="tier">amazing</span></td><td>clear</td><td><a class="listing" href="https://www.stubhub.com/event/161080573/?quantity=2&amp;sortBy=CALCULATEDBESTVALUE&amp;sortDirection=1&amp;priceOption=0,0,550&amp;listingId=13342487043" target="_blank" rel="noopener">View ↗</a></td></tr>
-    <tr><td>T1</td><td>13</td><td>✓&nbsp;2</td><td class="price">$420<span class="fee-note">incl. fees</span></td><td><span class="tier">amazing</span></td><td>clear</td><td><a class="listing" href="https://www.stubhub.com/event/161091284/?quantity=2&amp;sortBy=CALCULATEDBESTVALUE&amp;sortDirection=1&amp;priceOption=0,0,550&amp;listingId=12907598620" target="_blank" rel="noopener">View ↗</a></td></tr>
-    <tr><td>T2</td><td>14</td><td>✓&nbsp;2</td><td class="price">$426<span class="fee-note">incl. fees</span></td><td><span class="tier">amazing</span></td><td>clear</td><td><a class="listing" href="https://www.stubhub.com/event/161080573/?quantity=2&amp;sortBy=CALCULATEDBESTVALUE&amp;sortDirection=1&amp;priceOption=0,0,550&amp;listingId=13119349811" target="_blank" rel="noopener">View ↗</a></td></tr>
-    <tr><td>T31</td><td>10</td><td>✓&nbsp;2</td><td class="price">$432<span class="fee-note">incl. fees</span></td><td><span class="tier">amazing</span></td><td>clear</td><td><a class="listing" href="https://www.stubhub.com/event/161091284/?quantity=2&amp;sortBy=CALCULATEDBESTVALUE&amp;sortDirection=1&amp;priceOption=0,0,550&amp;listingId=12834398804" target="_blank" rel="noopener">View ↗</a></td></tr>
-    <tr><td>T2</td><td>12</td><td>✓&nbsp;2</td><td class="price">$433<span class="fee-note">incl. fees</span></td><td><span class="tier">amazing</span></td><td>clear</td><td><a class="listing" href="https://www.stubhub.com/event/161080573/?quantity=2&amp;sortBy=CALCULATEDBESTVALUE&amp;sortDirection=1&amp;priceOption=0,0,550&amp;listingId=13344557724" target="_blank" rel="noopener">View ↗</a></td></tr>
-    <tr><td>T4</td><td>14</td><td>✓&nbsp;2</td><td class="price">$435<span class="fee-note">incl. fees</span></td><td><span class="tier">great</span></td><td>clear</td><td><a class="listing" href="https://www.stubhub.com/event/161097468/?quantity=2&amp;sortBy=CALCULATEDBESTVALUE&amp;sortDirection=1&amp;priceOption=0,0,550&amp;listingId=13027539499" target="_blank" rel="noopener">View ↗</a></td></tr>
-    <tr><td>T1</td><td>12</td><td>✓&nbsp;2</td><td class="price">$436<span class="fee-note">incl. fees</span></td><td><span class="tier">amazing</span></td><td>clear</td><td><a class="listing" href="https://www.stubhub.com/event/161080573/?quantity=2&amp;sortBy=CALCULATEDBESTVALUE&amp;sortDirection=1&amp;priceOption=0,0,550&amp;listingId=12948579140" target="_blank" rel="noopener">View ↗</a></td></tr>
-    <tr><td>T3</td><td>10</td><td>✓&nbsp;2</td><td class="price">$438<span class="fee-note">incl. fees</span></td><td><span class="tier">great</span></td><td>clear</td><td><a class="listing" href="https://www.stubhub.com/event/161089786/?quantity=2&amp;sortBy=CALCULATEDBESTVALUE&amp;sortDirection=1&amp;priceOption=0,0,550&amp;listingId=13275418009" target="_blank" rel="noopener">View ↗</a></td></tr>
-    <tr><td>T30</td><td>9</td><td>✓&nbsp;2</td><td class="price">$442<span class="fee-note">incl. fees</span></td><td><span class="tier">great</span></td><td>clear</td><td><a class="listing" href="https://www.stubhub.com/event/161097468/?quantity=2&amp;sortBy=CALCULATEDBESTVALUE&amp;sortDirection=1&amp;priceOption=0,0,550&amp;listingId=12612750214" target="_blank" rel="noopener">View ↗</a></td></tr>
-    <tr><td>T4</td><td>9</td><td>✓&nbsp;2</td><td class="price">$446<span class="fee-note">incl. fees</span></td><td><span class="tier">great</span></td><td>clear</td><td><a class="listing" href="https://www.stubhub.com/event/161097468/?quantity=2&amp;sortBy=CALCULATEDBESTVALUE&amp;sortDirection=1&amp;priceOption=0,0,550&amp;listingId=12686883682" target="_blank" rel="noopener">View ↗</a></td></tr>
-    <tr><td>T32</td><td>11</td><td>✓&nbsp;2</td><td class="price">$453<span class="fee-note">incl. fees</span></td><td><span class="tier">amazing</span></td><td>clear</td><td><a class="listing" href="https://www.stubhub.com/event/161079898/?quantity=2&amp;sortBy=CALCULATEDBESTVALUE&amp;sortDirection=1&amp;priceOption=0,0,550&amp;listingId=13273227588" target="_blank" rel="noopener">View ↗</a></td></tr>
-    <tr><td>T1</td><td>11</td><td>✓&nbsp;2</td><td class="price">$454<span class="fee-note">incl. fees</span></td><td><span class="tier">amazing</span></td><td>clear</td><td><a class="listing" href="https://www.stubhub.com/event/161097468/?quantity=2&amp;sortBy=CALCULATEDBESTVALUE&amp;sortDirection=1&amp;priceOption=0,0,550&amp;listingId=13345207045" target="_blank" rel="noopener">View ↗</a></td></tr>
-    <tr><td>T1</td><td>12</td><td>✓&nbsp;2</td><td class="price">$454<span class="fee-note">incl. fees</span></td><td><span class="tier">amazing</span></td><td>clear</td><td><a class="listing" href="https://www.stubhub.com/event/161097468/?quantity=2&amp;sortBy=CALCULATEDBESTVALUE&amp;sortDirection=1&amp;priceOption=0,0,550&amp;listingId=13345207057" target="_blank" rel="noopener">View ↗</a></td></tr>
-    <tr><td>T1</td><td>10</td><td>✓&nbsp;2</td><td class="price">$454<span class="fee-note">incl. fees</span></td><td><span class="tier">amazing</span></td><td>clear</td><td><a class="listing" href="https://www.stubhub.com/event/161080573/?quantity=2&amp;sortBy=CALCULATEDBESTVALUE&amp;sortDirection=1&amp;priceOption=0,0,550&amp;listingId=13356491746" target="_blank" rel="noopener">View ↗</a></td></tr>
-    <tr><td>T2</td><td>7</td><td>✓&nbsp;2</td><td class="price">$456<span class="fee-note">incl. fees</span></td><td><span class="tier">amazing</span></td><td>clear</td><td><a class="listing" href="https://www.stubhub.com/event/161079898/?quantity=2&amp;sortBy=CALCULATEDBESTVALUE&amp;sortDirection=1&amp;priceOption=0,0,550&amp;listingId=12632160099" target="_blank" rel="noopener">View ↗</a></td></tr>
-    <tr><td>T3</td><td>7</td><td>✓&nbsp;2</td><td class="price">$456<span class="fee-note">incl. fees</span></td><td><span class="tier">great</span></td><td>clear</td><td><a class="listing" href="https://www.stubhub.com/event/161089786/?quantity=2&amp;sortBy=CALCULATEDBESTVALUE&amp;sortDirection=1&amp;priceOption=0,0,550&amp;listingId=13264410009" target="_blank" rel="noopener">View ↗</a></td></tr>
-    <tr><td>T31</td><td>6</td><td>✓&nbsp;2</td><td class="price">$457<span class="fee-note">incl. fees</span></td><td><span class="tier">great</span></td><td>clear</td><td><a class="listing" href="https://www.stubhub.com/event/161091284/?quantity=2&amp;sortBy=CALCULATEDBESTVALUE&amp;sortDirection=1&amp;priceOption=0,0,550&amp;listingId=13097742214" target="_blank" rel="noopener">View ↗</a></td></tr>
-    <tr><td>T3</td><td>12</td><td>✓&nbsp;2</td><td class="price">$460<span class="fee-note">incl. fees</span></td><td><span class="tier">amazing</span></td><td>clear</td><td><a class="listing" href="https://www.stubhub.com/event/161091284/?quantity=2&amp;sortBy=CALCULATEDBESTVALUE&amp;sortDirection=1&amp;priceOption=0,0,550&amp;listingId=12619767973" target="_blank" rel="noopener">View ↗</a></td></tr>
-    <tr><td>T32</td><td>9</td><td>✓&nbsp;2</td><td class="price">$463<span class="fee-note">incl. fees</span></td><td><span class="tier">amazing</span></td><td>clear</td><td><a class="listing" href="https://www.stubhub.com/event/161080573/?quantity=2&amp;sortBy=CALCULATEDBESTVALUE&amp;sortDirection=1&amp;priceOption=0,0,550&amp;listingId=13273227524" target="_blank" rel="noopener">View ↗</a></td></tr>
-    <tr><td>T4</td><td>6</td><td>✓&nbsp;2</td><td class="price">$468<span class="fee-note">incl. fees</span></td><td><span class="tier">great</span></td><td>clear</td><td><a class="listing" href="https://www.stubhub.com/event/161081141/?quantity=2&amp;sortBy=CALCULATEDBESTVALUE&amp;sortDirection=1&amp;priceOption=0,0,550&amp;listingId=12602526621" target="_blank" rel="noopener">View ↗</a></td></tr>
-    <tr><td>T3</td><td>3</td><td>✓&nbsp;2</td><td class="price">$472<span class="fee-note">incl. fees</span></td><td><span class="tier">amazing</span></td><td>clear</td><td><a class="listing" href="https://www.stubhub.com/event/161091284/?quantity=2&amp;sortBy=CALCULATEDBESTVALUE&amp;sortDirection=1&amp;priceOption=0,0,550&amp;listingId=13263409951" target="_blank" rel="noopener">View ↗</a></td></tr>
-    <tr><td>T31</td><td>9</td><td>✓&nbsp;2</td><td class="price">$473<span class="fee-note">incl. fees</span></td><td><span class="tier">great</span></td><td>clear</td><td><a class="listing" href="https://www.stubhub.com/event/161097468/?quantity=2&amp;sortBy=CALCULATEDBESTVALUE&amp;sortDirection=1&amp;priceOption=0,0,550&amp;listingId=12745455560" target="_blank" rel="noopener">View ↗</a></td></tr>
-    <tr><td>T3</td><td>12</td><td>✓&nbsp;2</td><td class="price">$474<span class="fee-note">incl. fees</span></td><td><span class="tier">great</span></td><td>clear</td><td><a class="listing" href="https://www.stubhub.com/event/161081141/?quantity=2&amp;sortBy=CALCULATEDBESTVALUE&amp;sortDirection=1&amp;priceOption=0,0,550&amp;listingId=13344201621" target="_blank" rel="noopener">View ↗</a></td></tr>
-    <tr><td>T32</td><td>10</td><td>✓&nbsp;2</td><td class="price">$480<span class="fee-note">incl. fees</span></td><td><span class="tier">amazing</span></td><td>clear</td><td><a class="listing" href="https://www.stubhub.com/event/161081141/?quantity=2&amp;sortBy=CALCULATEDBESTVALUE&amp;sortDirection=1&amp;priceOption=0,0,550&amp;listingId=13344201620" target="_blank" rel="noopener">View ↗</a></td></tr>
-    <tr><td>T2</td><td>12</td><td>✓&nbsp;2</td><td class="price">$480<span class="fee-note">incl. fees</span></td><td><span class="tier">great</span></td><td>clear</td><td><a class="listing" href="https://www.stubhub.com/event/161089786/?quantity=2&amp;sortBy=CALCULATEDBESTVALUE&amp;sortDirection=1&amp;priceOption=0,0,550&amp;listingId=13264410051" target="_blank" rel="noopener">View ↗</a></td></tr>
-    <tr><td>T2</td><td>9</td><td>✓&nbsp;2</td><td class="price">$482<span class="fee-note">incl. fees</span></td><td><span class="tier">amazing</span></td><td>clear</td><td><a class="listing" href="https://www.stubhub.com/event/161091284/?quantity=2&amp;sortBy=CALCULATEDBESTVALUE&amp;sortDirection=1&amp;priceOption=0,0,550&amp;listingId=13129011641" target="_blank" rel="noopener">View ↗</a></td></tr>
-    <tr><td>T3</td><td>8</td><td>✓&nbsp;2</td><td class="price">$482<span class="fee-note">incl. fees</span></td><td><span class="tier">great</span></td><td>clear</td><td><a class="listing" href="https://www.stubhub.com/event/161081141/?quantity=2&amp;sortBy=CALCULATEDBESTVALUE&amp;sortDirection=1&amp;priceOption=0,0,550&amp;listingId=13361000090" target="_blank" rel="noopener">View ↗</a></td></tr>
-    <tr><td>T2</td><td>9</td><td>✓&nbsp;2</td><td class="price">$490<span class="fee-note">incl. fees</span></td><td><span class="tier">great</span></td><td>clear</td><td><a class="listing" href="https://www.stubhub.com/event/161097468/?quantity=2&amp;sortBy=CALCULATEDBESTVALUE&amp;sortDirection=1&amp;priceOption=0,0,550&amp;listingId=13345207055" target="_blank" rel="noopener">View ↗</a></td></tr>
-    <tr><td>T3</td><td>7</td><td>✓&nbsp;2</td><td class="price">$490<span class="fee-note">incl. fees</span></td><td><span class="tier">great</span></td><td>clear</td><td><a class="listing" href="https://www.stubhub.com/event/161097468/?quantity=2&amp;sortBy=CALCULATEDBESTVALUE&amp;sortDirection=1&amp;priceOption=0,0,550&amp;listingId=13345207070" target="_blank" rel="noopener">View ↗</a></td></tr>
-    <tr><td>T1</td><td>11</td><td>✓&nbsp;2</td><td class="price">$497<span class="fee-note">incl. fees</span></td><td><span class="tier">amazing</span></td><td>clear</td><td><a class="listing" href="https://www.stubhub.com/event/161089786/?quantity=2&amp;sortBy=CALCULATEDBESTVALUE&amp;sortDirection=1&amp;priceOption=0,0,550&amp;listingId=12600028720" target="_blank" rel="noopener">View ↗</a></td></tr>
-    <tr><td>T32</td><td>8</td><td>✓&nbsp;2</td><td class="price">$497<span class="fee-note">incl. fees</span></td><td><span class="tier">amazing</span></td><td>clear</td><td><a class="listing" href="https://www.stubhub.com/event/161080573/?quantity=2&amp;sortBy=CALCULATEDBESTVALUE&amp;sortDirection=1&amp;priceOption=0,0,550&amp;listingId=13343932556" target="_blank" rel="noopener">View ↗</a></td></tr>
-    <tr><td>T1</td><td>6</td><td>✓&nbsp;2</td><td class="price">$500<span class="fee-note">incl. fees</span></td><td><span class="tier">amazing</span></td><td>clear</td><td><a class="listing" href="https://www.stubhub.com/event/161080573/?quantity=2&amp;sortBy=CALCULATEDBESTVALUE&amp;sortDirection=1&amp;priceOption=0,0,550&amp;listingId=12610425973" target="_blank" rel="noopener">View ↗</a></td></tr>
-    <tr><td>T30</td><td>6</td><td>✓&nbsp;2</td><td class="price">$502<span class="fee-note">incl. fees</span></td><td><span class="tier">great</span></td><td>clear</td><td><a class="listing" href="https://www.stubhub.com/event/161081141/?quantity=2&amp;sortBy=CALCULATEDBESTVALUE&amp;sortDirection=1&amp;priceOption=0,0,550&amp;listingId=13273316495" target="_blank" rel="noopener">View ↗</a></td></tr>
-    <tr><td>T1</td><td>5</td><td>✓&nbsp;2</td><td class="price">$502<span class="fee-note">incl. fees</span></td><td><span class="tier">amazing</span></td><td>clear</td><td><a class="listing" href="https://www.stubhub.com/event/161091284/?quantity=2&amp;sortBy=CALCULATEDBESTVALUE&amp;sortDirection=1&amp;priceOption=0,0,550&amp;listingId=12610655585" target="_blank" rel="noopener">View ↗</a></td></tr>
-    <tr><td>T23</td><td>11</td><td>✓&nbsp;2</td><td class="price">$508<span class="fee-note">incl. fees</span></td><td><span class="tier">great</span></td><td>clear</td><td><a class="listing" href="https://www.stubhub.com/event/161041514/?quantity=2&amp;sortBy=CALCULATEDBESTVALUE&amp;sortDirection=1&amp;priceOption=0,0,550&amp;listingId=13010355932" target="_blank" rel="noopener">View ↗</a></td></tr>
-    <tr><td>T1</td><td>12</td><td>✓&nbsp;2</td><td class="price">$520<span class="fee-note">incl. fees</span></td><td><span class="tier">amazing</span></td><td>clear</td><td><a class="listing" href="https://www.stubhub.com/event/161079898/?quantity=2&amp;sortBy=CALCULATEDBESTVALUE&amp;sortDirection=1&amp;priceOption=0,0,550&amp;listingId=12745929914" target="_blank" rel="noopener">View ↗</a></td></tr>
-    <tr><td>T32</td><td>11</td><td>✓&nbsp;2</td><td class="price">$520<span class="fee-note">incl. fees</span></td><td><span class="tier">great</span></td><td>clear</td><td><a class="listing" href="https://www.stubhub.com/event/161097468/?quantity=2&amp;sortBy=CALCULATEDBESTVALUE&amp;sortDirection=1&amp;priceOption=0,0,550&amp;listingId=12907788863" target="_blank" rel="noopener">View ↗</a></td></tr>
-    <tr><td>T32</td><td>4</td><td>✓&nbsp;2</td><td class="price">$524<span class="fee-note">incl. fees</span></td><td><span class="tier">amazing</span></td><td>clear</td><td><a class="listing" href="https://www.stubhub.com/event/161089786/?quantity=2&amp;sortBy=CALCULATEDBESTVALUE&amp;sortDirection=1&amp;priceOption=0,0,550&amp;listingId=13010465717" target="_blank" rel="noopener">View ↗</a></td></tr>
-    <tr><td>T31</td><td>7</td><td>✓&nbsp;2</td><td class="price">$529<span class="fee-note">incl. fees</span></td><td><span class="tier">great</span></td><td>clear</td><td><a class="listing" href="https://www.stubhub.com/event/161081141/?quantity=2&amp;sortBy=CALCULATEDBESTVALUE&amp;sortDirection=1&amp;priceOption=0,0,550&amp;listingId=12599976895" target="_blank" rel="noopener">View ↗</a></td></tr>
-    <tr><td>T32</td><td>9</td><td>✓&nbsp;2</td><td class="price">$529<span class="fee-note">incl. fees</span></td><td><span class="tier">great</span></td><td>clear</td><td><a class="listing" href="https://www.stubhub.com/event/161081141/?quantity=2&amp;sortBy=CALCULATEDBESTVALUE&amp;sortDirection=1&amp;priceOption=0,0,550&amp;listingId=12664409959" target="_blank" rel="noopener">View ↗</a></td></tr>
-    <tr><td>T2</td><td>8</td><td>✓&nbsp;2</td><td class="price">$538<span class="fee-note">incl. fees</span></td><td><span class="tier">amazing</span></td><td>clear</td><td><a class="listing" href="https://www.stubhub.com/event/161081141/?quantity=2&amp;sortBy=CALCULATEDBESTVALUE&amp;sortDirection=1&amp;priceOption=0,0,550&amp;listingId=12599543964" target="_blank" rel="noopener">View ↗</a></td></tr>
-    <tr><td>T7</td><td>13</td><td>✓&nbsp;2</td><td class="price">$542<span class="fee-note">incl. fees</span></td><td><span class="tier">great</span></td><td>clear</td><td><a class="listing" href="https://www.stubhub.com/event/161041514/?quantity=2&amp;sortBy=CALCULATEDBESTVALUE&amp;sortDirection=1&amp;priceOption=0,0,550&amp;listingId=13146661576" target="_blank" rel="noopener">View ↗</a></td></tr>
-    <tr><td>T1</td><td>10</td><td>✓&nbsp;2</td><td class="price">$546<span class="fee-note">incl. fees</span></td><td><span class="tier">amazing</span></td><td>clear</td><td><a class="listing" href="https://www.stubhub.com/event/161089786/?quantity=2&amp;sortBy=CALCULATEDBESTVALUE&amp;sortDirection=1&amp;priceOption=0,0,550&amp;listingId=12600060064" target="_blank" rel="noopener">View ↗</a></td></tr>
+    <tr><td>T32</td><td>13</td><td>✓&nbsp;2</td><td class="price">$403<span class="fee-note">incl. fees</span></td><td><span class="tier">amazing</span></td><td>clear</td><td><a class="listing" href="https://www.stubhub.com/event/161079898/?quantity=2&amp;sortBy=CALCULATEDBESTVALUE&amp;sortDirection=1&amp;priceOption=0,0,550&amp;listingId=13306306510" target="_blank" rel="noopener">View ↗</a></td></tr>
+    <tr><td>T32</td><td>11</td><td>✓&nbsp;2</td><td class="price">$439<span class="fee-note">incl. fees</span></td><td><span class="tier">amazing</span></td><td>clear</td><td><a class="listing" href="https://www.stubhub.com/event/161079898/?quantity=2&amp;sortBy=CALCULATEDBESTVALUE&amp;sortDirection=1&amp;priceOption=0,0,550&amp;listingId=13273227588" target="_blank" rel="noopener">View ↗</a></td></tr>
+    <tr><td>T2</td><td>7</td><td>✓&nbsp;2</td><td class="price">$442<span class="fee-note">incl. fees</span></td><td><span class="tier">amazing</span></td><td>clear</td><td><a class="listing" href="https://www.stubhub.com/event/161079898/?quantity=2&amp;sortBy=CALCULATEDBESTVALUE&amp;sortDirection=1&amp;priceOption=0,0,550&amp;listingId=12632160099" target="_blank" rel="noopener">View ↗</a></td></tr>
+    <tr><td>T1</td><td>12</td><td>✓&nbsp;2</td><td class="price">$504<span class="fee-note">incl. fees</span></td><td><span class="tier">amazing</span></td><td>clear</td><td><a class="listing" href="https://www.stubhub.com/event/161079898/?quantity=2&amp;sortBy=CALCULATEDBESTVALUE&amp;sortDirection=1&amp;priceOption=0,0,550&amp;listingId=12745929914" target="_blank" rel="noopener">View ↗</a></td></tr>
     <tr><td>31A</td><td>3</td><td>✓&nbsp;2</td><td class="price">$547<span class="fee-note">incl. fees</span></td><td><span class="tier">amazing</span></td><td>clear</td><td><a class="listing" href="https://www.stubhub.com/event/161079898/?quantity=2&amp;sortBy=CALCULATEDBESTVALUE&amp;sortDirection=1&amp;priceOption=0,0,550&amp;listingId=12679989967" target="_blank" rel="noopener">View ↗</a></td></tr>
-    <tr><td>T28</td><td>12</td><td>✓&nbsp;2</td><td class="price">$547<span class="fee-note">incl. fees</span></td><td><span class="tier">great</span></td><td>clear</td><td><a class="listing" href="https://www.stubhub.com/event/161041516/?quantity=2&amp;sortBy=CALCULATEDBESTVALUE&amp;sortDirection=1&amp;priceOption=0,0,550&amp;listingId=12614067094" target="_blank" rel="noopener">View ↗</a></td></tr>
-    <tr><td>T2</td><td>13</td><td>✓&nbsp;2</td><td class="price">$548<span class="fee-note">incl. fees</span></td><td><span class="tier">amazing</span></td><td>clear</td><td><a class="listing" href="https://www.stubhub.com/event/161041514/?quantity=2&amp;sortBy=CALCULATEDBESTVALUE&amp;sortDirection=1&amp;priceOption=0,0,550&amp;listingId=13213145891" target="_blank" rel="noopener">View ↗</a></td></tr>
     </tbody>
   </table>
   </div>
+</section>
+<section class="event-card" data-event="or-la-0121">
+  <header class="ev-head">
+    <div class="ev-title"><div class="ev-artist">Olivia Rodrigo</div><div class="ev-where">Intuit Dome · Jan 21, 2027</div></div>
+    <div class="ev-stats"><span class="ev-count">10 listings</span><span class="ev-floor" title="cheapest per-ticket price, all-in (incl. fees)"><span class="from">from</span>$421</span></div>
+  </header>
+  <div class="tickets-wrap">
+  <table>
+    <thead><tr><th>Section</th><th>Row</th><th>2-together</th><th class="price-h">Price/ea (all-in)<span class="fee-info" title="All-in per-ticket price — includes StubHub's fees, so it matches our price filter. Heads up: StubHub's own listing page defaults to the PRE-FEE price, which is lower, so the number you see there for the same seat will be smaller.">ⓘ</span></th><th>Value</th><th>View</th><th>Link</th></tr></thead>
+    <tbody>
+    <tr><td>T31</td><td>6</td><td>✓&nbsp;2</td><td class="price">$421<span class="fee-note">incl. fees</span></td><td><span class="tier">great</span></td><td>clear</td><td><a class="listing" href="https://www.stubhub.com/event/161080573/?quantity=2&amp;sortBy=CALCULATEDBESTVALUE&amp;sortDirection=1&amp;priceOption=0,0,550&amp;listingId=13258206176" target="_blank" rel="noopener">View ↗</a></td></tr>
+    <tr><td>T31</td><td>7</td><td>✓&nbsp;2</td><td class="price">$421<span class="fee-note">incl. fees</span></td><td><span class="tier">great</span></td><td>clear</td><td><a class="listing" href="https://www.stubhub.com/event/161080573/?quantity=2&amp;sortBy=CALCULATEDBESTVALUE&amp;sortDirection=1&amp;priceOption=0,0,550&amp;listingId=13258206205" target="_blank" rel="noopener">View ↗</a></td></tr>
+    <tr><td>T32</td><td>10</td><td>✓&nbsp;2</td><td class="price">$425<span class="fee-note">incl. fees</span></td><td><span class="tier">amazing</span></td><td>clear</td><td><a class="listing" href="https://www.stubhub.com/event/161080573/?quantity=2&amp;sortBy=CALCULATEDBESTVALUE&amp;sortDirection=1&amp;priceOption=0,0,550&amp;listingId=13342487043" target="_blank" rel="noopener">View ↗</a></td></tr>
+    <tr><td>T2</td><td>14</td><td>✓&nbsp;2</td><td class="price">$433<span class="fee-note">incl. fees</span></td><td><span class="tier">amazing</span></td><td>clear</td><td><a class="listing" href="https://www.stubhub.com/event/161080573/?quantity=2&amp;sortBy=CALCULATEDBESTVALUE&amp;sortDirection=1&amp;priceOption=0,0,550&amp;listingId=13119349811" target="_blank" rel="noopener">View ↗</a></td></tr>
+    <tr><td>T2</td><td>12</td><td>✓&nbsp;2</td><td class="price">$441<span class="fee-note">incl. fees</span></td><td><span class="tier">amazing</span></td><td>clear</td><td><a class="listing" href="https://www.stubhub.com/event/161080573/?quantity=2&amp;sortBy=CALCULATEDBESTVALUE&amp;sortDirection=1&amp;priceOption=0,0,550&amp;listingId=13344557724" target="_blank" rel="noopener">View ↗</a></td></tr>
+    <tr><td>T1</td><td>12</td><td>✓&nbsp;2</td><td class="price">$443<span class="fee-note">incl. fees</span></td><td><span class="tier">amazing</span></td><td>clear</td><td><a class="listing" href="https://www.stubhub.com/event/161080573/?quantity=2&amp;sortBy=CALCULATEDBESTVALUE&amp;sortDirection=1&amp;priceOption=0,0,550&amp;listingId=12948579140" target="_blank" rel="noopener">View ↗</a></td></tr>
+    <tr><td>T1</td><td>10</td><td>✓&nbsp;2</td><td class="price">$462<span class="fee-note">incl. fees</span></td><td><span class="tier">amazing</span></td><td>clear</td><td><a class="listing" href="https://www.stubhub.com/event/161080573/?quantity=2&amp;sortBy=CALCULATEDBESTVALUE&amp;sortDirection=1&amp;priceOption=0,0,550&amp;listingId=13356491746" target="_blank" rel="noopener">View ↗</a></td></tr>
+    <tr><td>T32</td><td>9</td><td>✓&nbsp;2</td><td class="price">$471<span class="fee-note">incl. fees</span></td><td><span class="tier">amazing</span></td><td>clear</td><td><a class="listing" href="https://www.stubhub.com/event/161080573/?quantity=2&amp;sortBy=CALCULATEDBESTVALUE&amp;sortDirection=1&amp;priceOption=0,0,550&amp;listingId=13273227524" target="_blank" rel="noopener">View ↗</a></td></tr>
+    <tr><td>T32</td><td>8</td><td>✓&nbsp;2</td><td class="price">$505<span class="fee-note">incl. fees</span></td><td><span class="tier">amazing</span></td><td>clear</td><td><a class="listing" href="https://www.stubhub.com/event/161080573/?quantity=2&amp;sortBy=CALCULATEDBESTVALUE&amp;sortDirection=1&amp;priceOption=0,0,550&amp;listingId=13343932556" target="_blank" rel="noopener">View ↗</a></td></tr>
+    <tr><td>T1</td><td>6</td><td>✓&nbsp;2</td><td class="price">$508<span class="fee-note">incl. fees</span></td><td><span class="tier">amazing</span></td><td>clear</td><td><a class="listing" href="https://www.stubhub.com/event/161080573/?quantity=2&amp;sortBy=CALCULATEDBESTVALUE&amp;sortDirection=1&amp;priceOption=0,0,550&amp;listingId=12610425973" target="_blank" rel="noopener">View ↗</a></td></tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+<section class="event-card" data-event="or-la-0124">
+  <header class="ev-head">
+    <div class="ev-title"><div class="ev-artist">Olivia Rodrigo</div><div class="ev-where">Intuit Dome · Jan 24, 2027</div></div>
+    <div class="ev-stats"><span class="ev-count">8 listings</span><span class="ev-floor" title="cheapest per-ticket price, all-in (incl. fees)"><span class="from">from</span>$468</span></div>
+  </header>
+  <div class="tickets-wrap">
+  <table>
+    <thead><tr><th>Section</th><th>Row</th><th>2-together</th><th class="price-h">Price/ea (all-in)<span class="fee-info" title="All-in per-ticket price — includes StubHub's fees, so it matches our price filter. Heads up: StubHub's own listing page defaults to the PRE-FEE price, which is lower, so the number you see there for the same seat will be smaller.">ⓘ</span></th><th>Value</th><th>View</th><th>Link</th></tr></thead>
+    <tbody>
+    <tr><td>T4</td><td>6</td><td>✓&nbsp;2</td><td class="price">$468<span class="fee-note">incl. fees</span></td><td><span class="tier">great</span></td><td>clear</td><td><a class="listing" href="https://www.stubhub.com/event/161081141/?quantity=2&amp;sortBy=CALCULATEDBESTVALUE&amp;sortDirection=1&amp;priceOption=0,0,550&amp;listingId=12602526621" target="_blank" rel="noopener">View ↗</a></td></tr>
+    <tr><td>T3</td><td>12</td><td>✓&nbsp;2</td><td class="price">$474<span class="fee-note">incl. fees</span></td><td><span class="tier">great</span></td><td>clear</td><td><a class="listing" href="https://www.stubhub.com/event/161081141/?quantity=2&amp;sortBy=CALCULATEDBESTVALUE&amp;sortDirection=1&amp;priceOption=0,0,550&amp;listingId=13344201621" target="_blank" rel="noopener">View ↗</a></td></tr>
+    <tr><td>T32</td><td>10</td><td>✓&nbsp;2</td><td class="price">$480<span class="fee-note">incl. fees</span></td><td><span class="tier">amazing</span></td><td>clear</td><td><a class="listing" href="https://www.stubhub.com/event/161081141/?quantity=2&amp;sortBy=CALCULATEDBESTVALUE&amp;sortDirection=1&amp;priceOption=0,0,550&amp;listingId=13344201620" target="_blank" rel="noopener">View ↗</a></td></tr>
+    <tr><td>T3</td><td>8</td><td>✓&nbsp;2</td><td class="price">$482<span class="fee-note">incl. fees</span></td><td><span class="tier">great</span></td><td>clear</td><td><a class="listing" href="https://www.stubhub.com/event/161081141/?quantity=2&amp;sortBy=CALCULATEDBESTVALUE&amp;sortDirection=1&amp;priceOption=0,0,550&amp;listingId=13361000090" target="_blank" rel="noopener">View ↗</a></td></tr>
+    <tr><td>T30</td><td>6</td><td>✓&nbsp;2</td><td class="price">$502<span class="fee-note">incl. fees</span></td><td><span class="tier">great</span></td><td>clear</td><td><a class="listing" href="https://www.stubhub.com/event/161081141/?quantity=2&amp;sortBy=CALCULATEDBESTVALUE&amp;sortDirection=1&amp;priceOption=0,0,550&amp;listingId=13273316495" target="_blank" rel="noopener">View ↗</a></td></tr>
+    <tr><td>T31</td><td>7</td><td>✓&nbsp;2</td><td class="price">$529<span class="fee-note">incl. fees</span></td><td><span class="tier">great</span></td><td>clear</td><td><a class="listing" href="https://www.stubhub.com/event/161081141/?quantity=2&amp;sortBy=CALCULATEDBESTVALUE&amp;sortDirection=1&amp;priceOption=0,0,550&amp;listingId=12599976895" target="_blank" rel="noopener">View ↗</a></td></tr>
+    <tr><td>T32</td><td>9</td><td>✓&nbsp;2</td><td class="price">$529<span class="fee-note">incl. fees</span></td><td><span class="tier">great</span></td><td>clear</td><td><a class="listing" href="https://www.stubhub.com/event/161081141/?quantity=2&amp;sortBy=CALCULATEDBESTVALUE&amp;sortDirection=1&amp;priceOption=0,0,550&amp;listingId=12664409959" target="_blank" rel="noopener">View ↗</a></td></tr>
+    <tr><td>T2</td><td>8</td><td>✓&nbsp;2</td><td class="price">$538<span class="fee-note">incl. fees</span></td><td><span class="tier">amazing</span></td><td>clear</td><td><a class="listing" href="https://www.stubhub.com/event/161081141/?quantity=2&amp;sortBy=CALCULATEDBESTVALUE&amp;sortDirection=1&amp;priceOption=0,0,550&amp;listingId=12599543964" target="_blank" rel="noopener">View ↗</a></td></tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+<section class="event-card" data-event="or-la-0125">
+  <header class="ev-head">
+    <div class="ev-title"><div class="ev-artist">Olivia Rodrigo</div><div class="ev-where">Intuit Dome · Jan 25, 2027</div></div>
+    <div class="ev-stats"><span class="ev-count">7 listings</span><span class="ev-floor" title="cheapest per-ticket price, all-in (incl. fees)"><span class="from">from</span>$316</span></div>
+  </header>
+  <div class="tickets-wrap">
+  <table>
+    <thead><tr><th>Section</th><th>Row</th><th>2-together</th><th class="price-h">Price/ea (all-in)<span class="fee-info" title="All-in per-ticket price — includes StubHub's fees, so it matches our price filter. Heads up: StubHub's own listing page defaults to the PRE-FEE price, which is lower, so the number you see there for the same seat will be smaller.">ⓘ</span></th><th>Value</th><th>View</th><th>Link</th></tr></thead>
+    <tbody>
+    <tr><td>M22</td><td>19</td><td>✓&nbsp;2</td><td class="price">$316<span class="fee-note">incl. fees</span></td><td><span class="tier">amazing</span></td><td>clear</td><td><a class="listing" href="https://www.stubhub.com/event/161089786/?quantity=2&amp;sortBy=CALCULATEDBESTVALUE&amp;sortDirection=1&amp;priceOption=0,0,550&amp;listingId=12609497579" target="_blank" rel="noopener">View ↗</a></td></tr>
+    <tr><td>T3</td><td>10</td><td>✓&nbsp;2</td><td class="price">$434<span class="fee-note">incl. fees</span></td><td><span class="tier">great</span></td><td>clear</td><td><a class="listing" href="https://www.stubhub.com/event/161089786/?quantity=2&amp;sortBy=CALCULATEDBESTVALUE&amp;sortDirection=1&amp;priceOption=0,0,550&amp;listingId=13275418009" target="_blank" rel="noopener">View ↗</a></td></tr>
+    <tr><td>T3</td><td>7</td><td>✓&nbsp;2</td><td class="price">$456<span class="fee-note">incl. fees</span></td><td><span class="tier">great</span></td><td>clear</td><td><a class="listing" href="https://www.stubhub.com/event/161089786/?quantity=2&amp;sortBy=CALCULATEDBESTVALUE&amp;sortDirection=1&amp;priceOption=0,0,550&amp;listingId=13264410009" target="_blank" rel="noopener">View ↗</a></td></tr>
+    <tr><td>T2</td><td>12</td><td>✓&nbsp;2</td><td class="price">$476<span class="fee-note">incl. fees</span></td><td><span class="tier">great</span></td><td>clear</td><td><a class="listing" href="https://www.stubhub.com/event/161089786/?quantity=2&amp;sortBy=CALCULATEDBESTVALUE&amp;sortDirection=1&amp;priceOption=0,0,550&amp;listingId=13264410051" target="_blank" rel="noopener">View ↗</a></td></tr>
+    <tr><td>T1</td><td>11</td><td>✓&nbsp;2</td><td class="price">$493<span class="fee-note">incl. fees</span></td><td><span class="tier">amazing</span></td><td>clear</td><td><a class="listing" href="https://www.stubhub.com/event/161089786/?quantity=2&amp;sortBy=CALCULATEDBESTVALUE&amp;sortDirection=1&amp;priceOption=0,0,550&amp;listingId=12600028720" target="_blank" rel="noopener">View ↗</a></td></tr>
+    <tr><td>T32</td><td>4</td><td>✓&nbsp;2</td><td class="price">$520<span class="fee-note">incl. fees</span></td><td><span class="tier">amazing</span></td><td>clear</td><td><a class="listing" href="https://www.stubhub.com/event/161089786/?quantity=2&amp;sortBy=CALCULATEDBESTVALUE&amp;sortDirection=1&amp;priceOption=0,0,550&amp;listingId=13010465717" target="_blank" rel="noopener">View ↗</a></td></tr>
+    <tr><td>T1</td><td>10</td><td>✓&nbsp;2</td><td class="price">$546<span class="fee-note">incl. fees</span></td><td><span class="tier">amazing</span></td><td>clear</td><td><a class="listing" href="https://www.stubhub.com/event/161089786/?quantity=2&amp;sortBy=CALCULATEDBESTVALUE&amp;sortDirection=1&amp;priceOption=0,0,550&amp;listingId=12600060064" target="_blank" rel="noopener">View ↗</a></td></tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+<section class="event-card" data-event="or-la-0128">
+  <header class="ev-head">
+    <div class="ev-title"><div class="ev-artist">Olivia Rodrigo</div><div class="ev-where">Intuit Dome · Jan 28, 2027</div></div>
+    <div class="ev-stats"><span class="ev-count">10 listings</span><span class="ev-floor" title="cheapest per-ticket price, all-in (incl. fees)"><span class="from">from</span>$287</span></div>
+  </header>
+  <div class="tickets-wrap">
+  <table>
+    <thead><tr><th>Section</th><th>Row</th><th>2-together</th><th class="price-h">Price/ea (all-in)<span class="fee-info" title="All-in per-ticket price — includes StubHub's fees, so it matches our price filter. Heads up: StubHub's own listing page defaults to the PRE-FEE price, which is lower, so the number you see there for the same seat will be smaller.">ⓘ</span></th><th>Value</th><th>View</th><th>Link</th></tr></thead>
+    <tbody>
+    <tr><td>T22</td><td>12</td><td>✓&nbsp;2</td><td class="price">$287<span class="fee-note">incl. fees</span></td><td><span class="tier">amazing</span></td><td>clear</td><td><a class="listing" href="https://www.stubhub.com/event/161091284/?quantity=2&amp;sortBy=CALCULATEDBESTVALUE&amp;sortDirection=1&amp;priceOption=0,0,550&amp;listingId=12824623940" target="_blank" rel="noopener">View ↗</a></td></tr>
+    <tr><td>T7</td><td>7</td><td>✓&nbsp;2</td><td class="price">$338<span class="fee-note">incl. fees</span></td><td><span class="tier">amazing</span></td><td>clear</td><td><a class="listing" href="https://www.stubhub.com/event/161091284/?quantity=2&amp;sortBy=CALCULATEDBESTVALUE&amp;sortDirection=1&amp;priceOption=0,0,550&amp;listingId=13381516426" target="_blank" rel="noopener">View ↗</a></td></tr>
+    <tr><td>T3</td><td>13</td><td>✓&nbsp;2</td><td class="price">$408<span class="fee-note">incl. fees</span></td><td><span class="tier">amazing</span></td><td>clear</td><td><a class="listing" href="https://www.stubhub.com/event/161091284/?quantity=2&amp;sortBy=CALCULATEDBESTVALUE&amp;sortDirection=1&amp;priceOption=0,0,550&amp;listingId=12619768714" target="_blank" rel="noopener">View ↗</a></td></tr>
+    <tr><td>T1</td><td>13</td><td>✓&nbsp;2</td><td class="price">$420<span class="fee-note">incl. fees</span></td><td><span class="tier">amazing</span></td><td>clear</td><td><a class="listing" href="https://www.stubhub.com/event/161091284/?quantity=2&amp;sortBy=CALCULATEDBESTVALUE&amp;sortDirection=1&amp;priceOption=0,0,550&amp;listingId=12907598620" target="_blank" rel="noopener">View ↗</a></td></tr>
+    <tr><td>T31</td><td>10</td><td>✓&nbsp;2</td><td class="price">$432<span class="fee-note">incl. fees</span></td><td><span class="tier">amazing</span></td><td>clear</td><td><a class="listing" href="https://www.stubhub.com/event/161091284/?quantity=2&amp;sortBy=CALCULATEDBESTVALUE&amp;sortDirection=1&amp;priceOption=0,0,550&amp;listingId=12834398804" target="_blank" rel="noopener">View ↗</a></td></tr>
+    <tr><td>T31</td><td>6</td><td>✓&nbsp;2</td><td class="price">$457<span class="fee-note">incl. fees</span></td><td><span class="tier">great</span></td><td>clear</td><td><a class="listing" href="https://www.stubhub.com/event/161091284/?quantity=2&amp;sortBy=CALCULATEDBESTVALUE&amp;sortDirection=1&amp;priceOption=0,0,550&amp;listingId=13097742214" target="_blank" rel="noopener">View ↗</a></td></tr>
+    <tr><td>T3</td><td>12</td><td>✓&nbsp;2</td><td class="price">$460<span class="fee-note">incl. fees</span></td><td><span class="tier">amazing</span></td><td>clear</td><td><a class="listing" href="https://www.stubhub.com/event/161091284/?quantity=2&amp;sortBy=CALCULATEDBESTVALUE&amp;sortDirection=1&amp;priceOption=0,0,550&amp;listingId=12619767973" target="_blank" rel="noopener">View ↗</a></td></tr>
+    <tr><td>T3</td><td>3</td><td>✓&nbsp;2</td><td class="price">$472<span class="fee-note">incl. fees</span></td><td><span class="tier">amazing</span></td><td>clear</td><td><a class="listing" href="https://www.stubhub.com/event/161091284/?quantity=2&amp;sortBy=CALCULATEDBESTVALUE&amp;sortDirection=1&amp;priceOption=0,0,550&amp;listingId=13263409951" target="_blank" rel="noopener">View ↗</a></td></tr>
+    <tr><td>T2</td><td>9</td><td>✓&nbsp;2</td><td class="price">$482<span class="fee-note">incl. fees</span></td><td><span class="tier">amazing</span></td><td>clear</td><td><a class="listing" href="https://www.stubhub.com/event/161091284/?quantity=2&amp;sortBy=CALCULATEDBESTVALUE&amp;sortDirection=1&amp;priceOption=0,0,550&amp;listingId=13129011641" target="_blank" rel="noopener">View ↗</a></td></tr>
+    <tr><td>T1</td><td>5</td><td>✓&nbsp;2</td><td class="price">$502<span class="fee-note">incl. fees</span></td><td><span class="tier">amazing</span></td><td>clear</td><td><a class="listing" href="https://www.stubhub.com/event/161091284/?quantity=2&amp;sortBy=CALCULATEDBESTVALUE&amp;sortDirection=1&amp;priceOption=0,0,550&amp;listingId=12610655585" target="_blank" rel="noopener">View ↗</a></td></tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+<section class="event-card" data-event="or-la-0129">
+  <header class="ev-head">
+    <div class="ev-title"><div class="ev-artist">Olivia Rodrigo</div><div class="ev-where">Intuit Dome · Jan 29, 2027</div></div>
+    <div class="ev-stats"><span class="ev-count">13 listings</span><span class="ev-floor" title="cheapest per-ticket price, all-in (incl. fees)"><span class="from">from</span>$414</span></div>
+  </header>
+  <div class="tickets-wrap">
+  <table>
+    <thead><tr><th>Section</th><th>Row</th><th>2-together</th><th class="price-h">Price/ea (all-in)<span class="fee-info" title="All-in per-ticket price — includes StubHub's fees, so it matches our price filter. Heads up: StubHub's own listing page defaults to the PRE-FEE price, which is lower, so the number you see there for the same seat will be smaller.">ⓘ</span></th><th>Value</th><th>View</th><th>Link</th></tr></thead>
+    <tbody>
+    <tr><td>T1</td><td>4</td><td>✓&nbsp;2</td><td class="price">$414<span class="fee-note">incl. fees</span></td><td><span class="tier">amazing</span></td><td>clear</td><td><a class="listing" href="https://www.stubhub.com/event/161097468/?quantity=2&amp;sortBy=CALCULATEDBESTVALUE&amp;sortDirection=1&amp;priceOption=0,0,550&amp;listingId=12834227280" target="_blank" rel="noopener">View ↗</a></td></tr>
+    <tr><td>T32</td><td>12</td><td>✓&nbsp;2</td><td class="price">$414<span class="fee-note">incl. fees</span></td><td><span class="tier">amazing</span></td><td>clear</td><td><a class="listing" href="https://www.stubhub.com/event/161097468/?quantity=2&amp;sortBy=CALCULATEDBESTVALUE&amp;sortDirection=1&amp;priceOption=0,0,550&amp;listingId=13120254646" target="_blank" rel="noopener">View ↗</a></td></tr>
+    <tr><td>T4</td><td>9</td><td>✓&nbsp;2</td><td class="price">$446<span class="fee-note">incl. fees</span></td><td><span class="tier">great</span></td><td>clear</td><td><a class="listing" href="https://www.stubhub.com/event/161097468/?quantity=2&amp;sortBy=CALCULATEDBESTVALUE&amp;sortDirection=1&amp;priceOption=0,0,550&amp;listingId=12686883682" target="_blank" rel="noopener">View ↗</a></td></tr>
+    <tr><td>T4</td><td>14</td><td>✓&nbsp;2</td><td class="price">$466<span class="fee-note">incl. fees</span></td><td><span class="tier">great</span></td><td>clear</td><td><a class="listing" href="https://www.stubhub.com/event/161097468/?quantity=2&amp;sortBy=CALCULATEDBESTVALUE&amp;sortDirection=1&amp;priceOption=0,0,550&amp;listingId=13027539499" target="_blank" rel="noopener">View ↗</a></td></tr>
+    <tr><td>T30</td><td>9</td><td>✓&nbsp;2</td><td class="price">$474<span class="fee-note">incl. fees</span></td><td><span class="tier">great</span></td><td>clear</td><td><a class="listing" href="https://www.stubhub.com/event/161097468/?quantity=2&amp;sortBy=CALCULATEDBESTVALUE&amp;sortDirection=1&amp;priceOption=0,0,550&amp;listingId=12612750214" target="_blank" rel="noopener">View ↗</a></td></tr>
+    <tr><td>T1</td><td>13</td><td>✓&nbsp;2</td><td class="price">$490<span class="fee-note">incl. fees</span></td><td><span class="tier">amazing</span></td><td>clear</td><td><a class="listing" href="https://www.stubhub.com/event/161097468/?quantity=2&amp;sortBy=CALCULATEDBESTVALUE&amp;sortDirection=1&amp;priceOption=0,0,550&amp;listingId=13348746422" target="_blank" rel="noopener">View ↗</a></td></tr>
+    <tr><td>T1</td><td>11</td><td>✓&nbsp;2</td><td class="price">$491<span class="fee-note">incl. fees</span></td><td><span class="tier">amazing</span></td><td>clear</td><td><a class="listing" href="https://www.stubhub.com/event/161097468/?quantity=2&amp;sortBy=CALCULATEDBESTVALUE&amp;sortDirection=1&amp;priceOption=0,0,550&amp;listingId=13345207045" target="_blank" rel="noopener">View ↗</a></td></tr>
+    <tr><td>T1</td><td>12</td><td>✓&nbsp;2</td><td class="price">$491<span class="fee-note">incl. fees</span></td><td><span class="tier">amazing</span></td><td>clear</td><td><a class="listing" href="https://www.stubhub.com/event/161097468/?quantity=2&amp;sortBy=CALCULATEDBESTVALUE&amp;sortDirection=1&amp;priceOption=0,0,550&amp;listingId=13345207057" target="_blank" rel="noopener">View ↗</a></td></tr>
+    <tr><td>T32</td><td>12</td><td>✓&nbsp;2</td><td class="price">$491<span class="fee-note">incl. fees</span></td><td><span class="tier">amazing</span></td><td>clear</td><td><a class="listing" href="https://www.stubhub.com/event/161097468/?quantity=2&amp;sortBy=CALCULATEDBESTVALUE&amp;sortDirection=1&amp;priceOption=0,0,550&amp;listingId=13345167787" target="_blank" rel="noopener">View ↗</a></td></tr>
+    <tr><td>T32</td><td>11</td><td>✓&nbsp;2</td><td class="price">$520<span class="fee-note">incl. fees</span></td><td><span class="tier">great</span></td><td>clear</td><td><a class="listing" href="https://www.stubhub.com/event/161097468/?quantity=2&amp;sortBy=CALCULATEDBESTVALUE&amp;sortDirection=1&amp;priceOption=0,0,550&amp;listingId=12907788863" target="_blank" rel="noopener">View ↗</a></td></tr>
+    <tr><td>T31</td><td>9</td><td>✓&nbsp;2</td><td class="price">$520<span class="fee-note">incl. fees</span></td><td><span class="tier">great</span></td><td>clear</td><td><a class="listing" href="https://www.stubhub.com/event/161097468/?quantity=2&amp;sortBy=CALCULATEDBESTVALUE&amp;sortDirection=1&amp;priceOption=0,0,550&amp;listingId=12745455560" target="_blank" rel="noopener">View ↗</a></td></tr>
+    <tr><td>T2</td><td>9</td><td>✓&nbsp;2</td><td class="price">$539<span class="fee-note">incl. fees</span></td><td><span class="tier">great</span></td><td>clear</td><td><a class="listing" href="https://www.stubhub.com/event/161097468/?quantity=2&amp;sortBy=CALCULATEDBESTVALUE&amp;sortDirection=1&amp;priceOption=0,0,550&amp;listingId=13345207055" target="_blank" rel="noopener">View ↗</a></td></tr>
+    <tr><td>T3</td><td>7</td><td>✓&nbsp;2</td><td class="price">$539<span class="fee-note">incl. fees</span></td><td><span class="tier">great</span></td><td>clear</td><td><a class="listing" href="https://www.stubhub.com/event/161097468/?quantity=2&amp;sortBy=CALCULATEDBESTVALUE&amp;sortDirection=1&amp;priceOption=0,0,550&amp;listingId=13345207070" target="_blank" rel="noopener">View ↗</a></td></tr>
+    </tbody>
+  </table>
+  </div>
+</section>
   <footer>Auto-generated from public inventory. Prices/availability change fast — tap a listing to view it live on StubHub.</footer>
 <script>
 (function(){
